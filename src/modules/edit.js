@@ -17,7 +17,7 @@ const removes = (index, li, work, icon) => {
   icon.setAttribute('class', 'show');
   icon.addEventListener('click', () => {
     const retrieveData = localStorage.getItem('list');
-    let data = JSON.parse(retrieveData);
+    const data = JSON.parse(retrieveData);
     for (let i = 0; i < data.length; i += 1) {
       if (data[i].index !== index) {
         const datas = [];
