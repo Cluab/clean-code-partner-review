@@ -17,12 +17,12 @@ const removes = (index, li, work, icon) => {
   icon.setAttribute('class', 'show');
   icon.addEventListener('click', () => {
     const retrieveData = localStorage.getItem('list');
-    const data = JSON.parse(retrieveData);
+    let data = JSON.parse(retrieveData);
     for (let i = 0; i < data.length; i += 1) {
-      if (data[i].index != index) {
+      if (data[i].index !== index) {
         const datas = [];
         datas.push(data[i]);
-        data = datas;
+        const data = datas;
       }
       for (let j = 0; j < data.length; j += 1) {
         // fixes index number of and left list
