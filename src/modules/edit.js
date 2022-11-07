@@ -21,7 +21,7 @@ const removes = (index, li, work, icon) => {
     const datas = [];
     for (let i = 0; i < data.length; i += 1) {
       if (data[i].index !== index) {
-        datas.push(data[i]);
+        data = data.filter((data) => data[i]);
       }
 
       for (let j = 0; j < data.length; j += 1) {
